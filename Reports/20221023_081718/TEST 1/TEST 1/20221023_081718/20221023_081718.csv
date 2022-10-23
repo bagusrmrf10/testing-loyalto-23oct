@@ -1,0 +1,33 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TEST 1,,,,2022-10-23 08:17:23,2022-10-23 08:17:38,14.370s,PASSED
+,,,,,,,
+Test Cases/Validation create user,,,,2022-10-23 08:17:24,2022-10-23 08:17:30,5.381s,PASSED
+"sendRequest(findTestObject(""POST/POST CREATE USER""))",,,,2022-10-23 08:17:25,2022-10-23 08:17:28,3.365s,PASSED
+"response = sendRequestAndVerify(findTestObject(""POST/POST CREATE USER""))",,,,2022-10-23 08:17:28,2022-10-23 08:17:30,1.421s,PASSED
+"verifyResponseStatusCode(response, 201)",,,,2022-10-23 08:17:30,2022-10-23 08:17:30,0.004s,PASSED
+,,,,,,,
+Test Cases/Validation Register user succesfull,,,,2022-10-23 08:17:30,2022-10-23 08:17:32,2.566s,PASSED
+"sendRequest(findTestObject(""POST/POST REGISTER USER""))",,,,2022-10-23 08:17:30,2022-10-23 08:17:31,0.739s,PASSED
+"response = sendRequestAndVerify(findTestObject(""POST/POST REGISTER USER""))",,,,2022-10-23 08:17:31,2022-10-23 08:17:32,0.983s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2022-10-23 08:17:32,2022-10-23 08:17:32,0.054s,PASSED
+,,,,,,,
+Test Cases/Validation response single user,,,,2022-10-23 08:17:32,2022-10-23 08:17:34,1.712s,PASSED
+"sendRequest(findTestObject(""GET/Get single user""))",,,,2022-10-23 08:17:33,2022-10-23 08:17:33,0.277s,PASSED
+"response = sendRequestAndVerify(findTestObject(""GET/Get single user""))",,Send Request & Verify Response,,2022-10-23 08:17:33,2022-10-23 08:17:34,1.058s,PASSED
+"verifyResponseStatusCode(response, 200)",,"Verify response status code
+",,2022-10-23 08:17:34,2022-10-23 08:17:34,0.005s,PASSED
+"verifyElementPropertyValue(response, ""data.first_name"", ""George"")",,Verify element data list,,2022-10-23 08:17:34,2022-10-23 08:17:34,0.031s,PASSED
+,,,,,,,
+Test Cases/Validation response dan verify JSON value,,,,2022-10-23 08:17:34,2022-10-23 08:17:36,2.067s,PASSED
+"sendRequest(findTestObject(""GET/Get list user""))",,"Send Request
+",,2022-10-23 08:17:34,2022-10-23 08:17:35,0.613s,PASSED
+"response = sendRequestAndVerify(findTestObject(""GET/Get list user""))",,Send Request & Verify Response,,2022-10-23 08:17:35,2022-10-23 08:17:36,0.996s,PASSED
+"verifyResponseStatusCode(response, 200)",,"Verify response status code
+",,2022-10-23 08:17:36,2022-10-23 08:17:36,0.019s,PASSED
+"verifyElementsCount(response, ""data.first_name"", 6)",,Verify element count,,2022-10-23 08:17:36,2022-10-23 08:17:36,0.112s,PASSED
+"verifyElementPropertyValue(response, ""data[4].first_name"", ""Charles"")",,Verify element data list,,2022-10-23 08:17:36,2022-10-23 08:17:36,0.034s,PASSED
+,,,,,,,
+Test Cases/Validation Update User,,,,2022-10-23 08:17:36,2022-10-23 08:17:38,1.775s,PASSED
+"sendRequest(findTestObject(""PUT/PUT Update User""))",,,,2022-10-23 08:17:36,2022-10-23 08:17:37,0.630s,PASSED
+"response = sendRequestAndVerify(findTestObject(""PUT/PUT Update User""))",,,,2022-10-23 08:17:37,2022-10-23 08:17:38,0.798s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2022-10-23 08:17:38,2022-10-23 08:17:38,0.003s,PASSED
